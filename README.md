@@ -65,23 +65,36 @@ JavaScript constructor functions and Prototypes.
 * Refactor your JavaScript source files!
 * Refactor your spec files!
 
-
 ### Release 3 : The view
 
 Now let's add some interaction with the DOM. Write your DOM interaction code in
 `view.js` using the [jQuery library][]. Use either the
 objects you built in release 1 or 2.
 
-In this release, let's try writing the code first and then the tests.
+In this release, let's try writing the code first and then the tests.  We've
+provided you a primitive HTML shell in `orange.html`.
 
 * Write code that allows you to `plant` a tree by clicking a button. It should
-  be visible on the screen somehow. (There is a tree image in the images file
-  you may use)
+  make the tree become visible on the screen somehow.  Look at
+  `#orange-tree-template`.  It's not showing when the page loads, could you use
+  JavaScript to change a CSS property on that div to make it appear?  Once the
+  tree is visible can you make the button become disabled?
 * Write code that allows you to `age` a tree by clicking a button.  If you age
   the tree enough there should be oranges that appear on the tree (use the
-  orange image)
+  orange image).  The age of the tree should be shown in the `p.age` element.
+  The total number of oranges it has should be shown in `p.fruit-count`.
 * Write code that allows you to `pick` a tree off an orange by clicking a
-  button.
+  button.  This should decrease the count of fruits as well as remove an image
+
+**WARNING**:  Congratulations - you've reached the edge of procedural code.  To
+achieve the goals of Release 3 you _could_ do a very procedural implementation
+- but each additional change of functionality will be painful and make you sad.
+Try to figure out how to implement the MVC pattern in JavaScript.  MVC has
+nothing to do with how files are laid out or any particular language but is a
+way of identifying primary responsibilities and associating them with classes.
+As we said, above, Orange Trees is a simple application that affords you the
+change _to create a beautiful implementation_.  Take advantage of this
+narrowly-focused application to build your skills!
 
 ### Release 4
 
