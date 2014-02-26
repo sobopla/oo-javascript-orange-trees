@@ -4,7 +4,7 @@
 
 * Use Testing to TDD JavaScript code with Jasmine.
 * Use basic JavaScript - functions, control structures, scope.
-* Write OO JavaScript 
+* Write OO JavaScript
 * Use jQuery effects like toggle, show, hide, animate
 * Write custom event handlers in JavaScript and jQuery
 
@@ -18,9 +18,9 @@ Here are some features:
 * After a tree reaches fruit bearing age, it can grow fruit.
 * A tree grows a random amount of oranges each year it ages (after reaching fruit bearing age)
 * An orange has a random diameter.
-* You can pick all the fruit that grows each year. 
+* You can pick all the fruit that grows each year.
 * Any un-picked fruit dies when the tree ages again.
-* A tree dies after it ages for it's max age years and can no longer bear fruit.  
+* A tree dies after it ages for it's max age years and can no longer bear fruit.
 
 ## Releases
 
@@ -66,15 +66,15 @@ In this release, let's try writing the code first and then the tests.
   be visible on the screen somehow. (There is a tree image in the images file you may use)
 * Write code that allows you to `age` a tree by clicking a button.  If you age the tree enough there should be oranges that appear on the tree (use the orange image)
 * Write code that allows you to `pick` a tree off an orange by clicking a
-  button. 
- 
+  button.
+
 ### Release 4
 
 Explore the `jasmine-jquery` gem to write tests for the jQuery code in the previous release.
 
 ### Release 5
 
-* Have some fun.  Can you add a pear tree? Can you do it TDD? 
+* Have some fun.  Can you add a pear tree? Can you do it TDD?
 * Can you pick all the fruit that grows each year and put it in a basket?
 * Can you know the number of fruit in the basket and the average diameter of that fruit at any time?
 
