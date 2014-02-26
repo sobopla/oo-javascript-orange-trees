@@ -69,7 +69,7 @@ JavaScript constructor functions and Prototypes.
 ### Release 3 : The view
 
 Now let's add some interaction with the DOM. Write your DOM interaction code in
-`view.js` using the [jQuery library](http://jquery.com/). Use either the
+`view.js` using the [jQuery library][]. Use either the
 objects you built in release 1 or 2.
 
 In this release, let's try writing the code first and then the tests.
@@ -104,5 +104,7 @@ previous release.
 1. [Jasmine jQuery](https://github.com/velesin/jasmine-jquery)
 1. [Another Jasmine Tutorial](http://evanhahn.com/how-do-i-jasmine/)
 1. [Sandi Metz][metz]
+1. [jQuery][jQuery library]
 
 [metz]: http://www.sandimetz.com/
+[jQuery library]: http://jquery.com/
