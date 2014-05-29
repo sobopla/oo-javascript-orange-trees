@@ -36,9 +36,9 @@ tree.  We will model all of this using JavaScript functions and
 Plain-Old-JavaScript-Objects(aka Object-Literals).
 
 * One by one, make the
-  [plain-old-js-objects-spec](./spec/javascripts/plain_old_js_objects_spec.js)
+  [plain-old-js-objects-spec](./spec/javascripts/plain-old-js-objects-spec.js)
   pass without using prototypes or constructor functions. Use the
-  [plain-old-js-objects](./javascripts/plain-old-js-objects.js) file.
+  [plain-old-js-objects](./javascripts/src/plain-old-js-objects.js) file.
 * Refactor your JavaScript source files!
 * Refactor your spec files!
 
