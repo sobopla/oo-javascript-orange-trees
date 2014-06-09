@@ -33,7 +33,7 @@ We've written a lot of tests for you in Jasmine, your job is to write the code t
 Here we'll be building objects with functions. In this release we will create an
 orange tree, age the tree, grow oranges on the tree, and pick fruit off the
 tree.  We will model all of this using JavaScript functions and
-Plain-Old-JavaScript-Objects(aka Object-Literals).
+Plain-Old-JavaScript-Objects(aka Object-Literals -- without constructor functions).
 
 * One by one, make the
   [plain-old-js-objects-spec](./spec/javascripts/plain-old-js-objects-spec.js)
