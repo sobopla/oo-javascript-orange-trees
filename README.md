@@ -19,14 +19,14 @@ Javascript objects.
 Here are some features:
 
 * A tree can age.
-* For each year the tree ages up to it's fruit bearing age, it gets taller.
+* For each year the tree ages up to its fruit bearing age, it gets taller.
 * After a tree reaches fruit bearing age, it can grow fruit.
 * A tree grows a random amount of oranges each year it ages (after reaching
   fruit bearing age)
 * An orange has a random diameter.
 * You can pick all the fruit that grows each year.
 * Any un-picked fruit dies when the tree ages again.
-* A tree dies after it ages for it's max age years and can no longer bear
+* A tree dies after it ages for its max age years and can no longer bear
   fruit.
 
 ## Releases
