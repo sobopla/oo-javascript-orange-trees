@@ -72,7 +72,7 @@ Now let's add some interaction with the DOM. Write your DOM interaction code in
 objects you built in release 1 or 2.
 
 In this release, let's try writing the code first and then the tests.  We've
-provided you a primitive HTML shell in [`orange.html`](./source/orange.html).
+provided you a primitive HTML shell in [`orange.html`](./orange.html).
 
 * Write code that allows you to `plant` a tree by clicking a button. It should
   make the tree become visible on the screen somehow.  Look at
