@@ -112,7 +112,7 @@ previous release.
 
 1. [tryJasmine.com](http://tryjasmine.com)
 1. [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-1. [Jasmine Documentation](http://pivotal.github.io/jasmine/)
+1. [Jasmine Documentation](http://jasmine.github.io/)
 1. [Jasmine Cheat Sheet](http://www.cheatography.com/citguy/cheat-sheets/jasmine-js-testing/)
 1. [Jasmine jQuery](https://github.com/velesin/jasmine-jquery)
 1. [Another Jasmine Tutorial](http://evanhahn.com/how-do-i-jasmine/)
