@@ -74,10 +74,18 @@ describe ("createTree", function() {
 
   describe ("pickOrange", function() {
     xit("should return a orange object", function() {
-      expect(pickOrange()).toBeDefined();
+      var tree=createTree();
+      while (tree.age< FRUIT_BEARING_AGE) {
+        tree.grow();
+      }
+      expect(pickOrange(tree)).toBeDefined();
     });
     xit("should return an orange with a random diameter > 0", function() {
-      var orange = pickOrange();
+      var tree=createTree();
+      while (tree.age< FRUIT_BEARING_AGE) {
+        tree.grow();
+      }
+      var orange = pickOrange(tree);
       expect(orange.diameter).toBeGreaterThan(0);
     });
   });
