@@ -76,14 +76,14 @@ describe ("createTree", function() {
     });
     describe ("pickOrange, a function to manipulate a tree", function() {
       it("should return a orange object", function() {
-        while (tree.age< FRUIT_BEARING_AGE) {
+        while (tree.age < FRUIT_BEARING_AGE) {
           tree.grow();
         }
         expect(pickOrange(tree)).toBeDefined();
       });
 
       xit("should return an orange with a random diameter > 0", function() {
-        while (tree.age< FRUIT_BEARING_AGE) {
+        while (tree.age < FRUIT_BEARING_AGE) {
           tree.grow();
         }
         var orange = pickOrange(tree);
