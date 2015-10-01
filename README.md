@@ -83,7 +83,7 @@ provided you a primitive HTML shell in [`orange.html`](./orange.html).
   the tree enough there should be oranges that appear on the tree (use the
   orange image).  The age of the tree should be shown in the `p.age` element.
   The total number of oranges it has should be shown in `p.fruit-count`.
-* Write code that allows you to `pick` a tree off an orange by clicking a
+* Write code that allows you to `pick` an orange off a tree by clicking a
   button.  This should decrease the count of fruits as well as remove an image
 
 **WARNING**:  Congratulations - you've reached the edge of procedural code.  To
