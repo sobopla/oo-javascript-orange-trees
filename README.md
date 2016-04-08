@@ -82,6 +82,7 @@ Person.prototype.bigName = function() {
 jamie.bigName();
 // => 'JAMIE'
 ```
+*Figure 2*.  Exploring prototypal inheritance in JavaScript.
 
 
 ## Releases
