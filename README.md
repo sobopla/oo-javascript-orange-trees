@@ -86,83 +86,22 @@ jamie.bigName();
 
 
 ## Releases
+### Release 0: Model an Orange Tree
+Here are some details for how our orange tree model will behave.  Don't worry about modeling things like how the temperature affects production; we're just building a basic model.  Each of these details should be translated into tests (`spec/orange_tree_spec.js`), so that we can verify that our model conforms to each expectation.  Suggested property names are in parentheses; our model may very well include more properties than these.
 
-### Release 0 : Working with Jasmine
+- A tree has an age, which we should be able to check (`age`).
+- A tree has a height, which we should be able to check (`height`).
+- A tree has a collection of oranges, which we should be able to check (`oranges`).
+- We can check if a tree is old enough to produce fruit (`is_mature()`).
+- A tree dies at age 100, and we can check if it's dead (`is_dead()`).
+- We can check if a tree has any oranges (`has_oranges()`).
+- Each growing season (`pass_growing_season()`) ...
+  - Any unharvested oranges from the previous season should drop.
+  - A tree should age one year.
+  - A tree should grow 2.5 feet taller until it reaches its maximum height, say 25 feet.
+  - A tree should bear fruit if it is mature (i.e. at least six years old), say 100 to 300 oranges.
+- We can pick an orange off a tree (`pick_an_orange()`).
 
-We've written a lot of tests for you in Jasmine, your job is to write the code
-to make these tests pass.  Start your test server by running `rake jasmine`.
-You should see your first failing test.  Write code in
-`src/plain-old-js-objects.js` to make this test pass.  Then uncomment the next
-test (change the `xit` to `it`) and keep going.
-
-### Release 1 : Plain Old JavaScript Objects (Object Literals)
-
-Here we'll be building objects with functions. In this release we will create an
-orange tree, age the tree, grow oranges on the tree, and pick fruit off the
-tree.  We will model all of this using JavaScript functions and
-Plain-Old-JavaScript-Objects(aka Object-Literals -- without constructor functions).
-
-* One by one, make the
-  [plain-old-js-objects-spec](./spec/javascripts/plain-old-js-objects-spec.js)
-  pass without using prototypes or constructor functions. Use the
-  [plain-old-js-objects](./javascripts/src/plain-old-js-objects.js) file.
-* Refactor your JavaScript source files!
-* Refactor your spec files!
-
-### Release 2 : JavaScript Constructor Function Objects
-
-In this release we will AGAIN create an orange tree, age the tree, grow oranges
-on the tree, and pick fruit off the tree.  We will model all of this using
-JavaScript constructor functions and Prototypes.
-
-* One by one, copy the plain old js objects spec into the typed objects spec.
-  However, change them to use the `new OrangeTree` and `prototype` syntax as you
-  do. use the `javascripts/typed-js-objects.js` file.
-* Refactor your JavaScript source files!
-* Refactor your spec files!
-
-### Release 3 : The view
-
-Now let's add some interaction with the DOM. Write your DOM interaction code in
-`view.js` using the [jQuery library][]. Use either the
-objects you built in release 1 or 2.
-
-In this release, let's try writing the code first and then the tests.  We've
-provided you a primitive HTML shell in [`orange.html`](./orange.html).
-
-* Write code that allows you to `plant` a tree by clicking a button. It should
-  make the tree become visible on the screen somehow.  Look at
-  `#orange-tree-template`.  It's not showing when the page loads, could you use
-  JavaScript to change a CSS property on that div to make it appear?  Once the
-  tree is visible can you make the button become disabled?
-* Write code that allows you to `age` a tree by clicking a button.  If you age
-  the tree enough there should be oranges that appear on the tree (use the
-  orange image).  The age of the tree should be shown in the `p.age` element.
-  The total number of oranges it has should be shown in `p.fruit-count`.
-* Write code that allows you to `pick` an orange off a tree by clicking a
-  button.  This should decrease the count of fruits as well as remove an image
-
-**WARNING**:  Congratulations - you've reached the edge of procedural code.  To
-achieve the goals of Release 3 you _could_ do a very procedural implementation
-- but each additional change of functionality will be painful and make you sad.
-Try to figure out how to implement the MVC pattern in JavaScript.  MVC has
-nothing to do with how files are laid out or any particular language but is a
-way of identifying primary responsibilities and associating them with classes.
-As we said, above, Orange Trees is a simple application that affords you the
-change _to create a beautiful implementation_.  Take advantage of this
-narrowly-focused application to build your skills!
-
-### Release 4
-
-Explore the `jasmine-jquery` gem to write tests for the jQuery code in the
-previous release.
-
-### Release 5
-
-* Have some fun.  Can you add a pear tree? Can you do it TDD?
-* Can you pick all the fruit that grows each year and put it in a basket?
-* Can you know the number of fruit in the basket and the average diameter of
-  that fruit at any time?
 
 ## Resources
 
