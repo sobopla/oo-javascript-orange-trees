@@ -1,13 +1,5 @@
 # Orange Trees
 
-## Learning Competencies
-
-* Use Testing to TDD JavaScript code with Jasmine.
-* Use basic JavaScript - functions, control structures, scope.
-* Write OO JavaScript
-* Use jQuery effects like toggle, show, hide, animate
-* Write custom event handlers in JavaScript and jQuery
-
 ## Summary
 
 Remember our old friend **Orange Trees** from Ruby? Let's revisit it in
