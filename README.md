@@ -103,17 +103,5 @@ Here are some details for how our orange tree model will behave.  Don't worry ab
 - We can pick an orange off a tree (`pick_an_orange()`).
 
 
-## Resources
 
-1. [tryJasmine.com](http://tryjasmine.com)
-1. [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-1. [Jasmine Documentation](http://jasmine.github.io/2.0/introduction.html)
-1. [Jasmine Cheat Sheet](http://www.cheatography.com/citguy/cheat-sheets/jasmine-js-testing/)
-1. [Jasmine jQuery](https://github.com/velesin/jasmine-jquery)
-1. [Another Jasmine Tutorial](http://evanhahn.com/how-do-i-jasmine/)
-1. [Sandi Metz][metz]
-1. [jQuery][jQuery library]
-
-[metz]: http://www.sandimetz.com/
-[jQuery library]: http://jquery.com/
 [orange tree challenge]: ../../../../orange-tree-1-just-oranges-challenge
