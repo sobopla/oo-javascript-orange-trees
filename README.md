@@ -1,25 +1,88 @@
 # OOJS: Model an Orange Tree
 
 ## Summary
+Remember the [orange tree][orange tree challenge] objects that we built in Ruby?  We're going to build JavaScript objects with the same attributes and behaviors.  
 
-Remember our old friend **Orange Trees** from Ruby? Let's revisit it in
-JavaScript.  While this assignment might look _superficially_ easy you can make
-this a very powerful and elegant program and unify the lessons of [The
-Prophetess Metz's][metz] scrolls *as well* what you know about how to write
-Javascript objects.
+We're going to create orange trees through a constructor function.  The constructor will initialize each tree with its own unique attributes: age, height, and a collection of oranges.  All trees might start being zero years old, zero feet tall, and with an empty collection of oranges; but, these attributes are unique to each tree object—they're not shared.  On the other hand, the behaviors of orange trees will be shared.  All trees will inherit methods for aging, growing, etc.
 
-Here are some features:
 
-* A tree can age.
-* For each year the tree ages up to its fruit bearing age, it gets taller.
-* After a tree reaches fruit bearing age, it can grow fruit.
-* A tree grows a random amount of oranges each year it ages (after reaching
-  fruit bearing age)
-* An orange has a random diameter.
-* You can pick all the fruit that grows each year.
-* Any un-picked fruit dies when the tree ages again.
-* A tree dies after it ages for its max age years and can no longer bear
-  fruit.
+### Prototypal Inheritance
+When thinking about inheritance in JavaScript, throw out what we know about method lookup in Ruby—well, most of it, anyway.  JavaScript doesn't have classes, so when an object itself doesn't have a property, we can't look in the class, parent class, grandparent class, etc.  Instead, JavaScript objects inherit attributes and behaviors from their prototypes.  So, what is a prototype and how does an object get a prototype?
+
+Every JavaScript function has a `prototype` property.  Regardless of whether we intend to use the function as a constructor or not, when we write a function, JavaScript will give the function a `prototype` property and set its value to a new empty JavaScript object (`{}`, see Figure 1).
+
+```js
+var addition = function(number1, number2) {
+  return number1 + number2;
+}
+addition.prototype;
+// => {}
+
+var Person = function(name) {
+  this.name = name;
+}
+Person.prototype;
+// => {}
+addition.prototype === Person.prototype;
+// => false ()
+```
+*Figure 1*. Creating functions and looking at the value of each function's `prototype` property.
+
+
+So, every function has a `prototype`, how does that affect inheritance?  A function's `prototype` object comes into play when we use a function as a constructor (e.g., `new Person("Jamie")`).  When we use a function as a constructor to initialize objects, the constructor's prototype object is figuratively buried deep within the newly created objects and becomes the object from which the new instances inherit.  If we want to know from which object an object inherits, we can ask `Object` to get it for us.  Figure 2 presents some code to demonstrate these concepts; follow along in the browser console or the node REPL if node is installed on our system (use the `node` command from the command line).
+
+```js
+// Create a constructor function and check its prototype.
+var Person = function(name) {
+  this.name = name;
+}
+Person.prototype;
+// => {}
+
+
+// Give the Person constructor's prototype a greeting property.
+Person.prototype.greeting = "Hello";
+Person.prototype;
+// => { greeting: 'Hello' }
+
+
+// Create a new Person instance, jamie.
+jamie = new Person("Jamie");
+// => { name: 'Jamie' }
+
+
+// Look up the object from which the jamie object inherits.
+Object.getPrototypeOf(jamie);
+// => { greeting: 'Hello' }
+
+
+// Show that the object from which the jamie object inherits
+// is the Person constructor's prototype.
+Object.getPrototypeOf(jamie) === Person.prototype;
+// => true
+
+
+// Show that the jamie object inherits the greeting property
+// from the Person constructor's prototype.
+Person.prototype.greeting;
+// => 'Hello'
+jamie;
+// => { name: 'Jamie' }
+jamie.name;
+// => 'Jamie'
+jamie.greeting;
+// => 'Hello'
+
+
+// Add another property to the Person constructor's prototype, 
+// and show that is it inherited by the jamie object.
+Person.prototype.bigName = function() {
+  return this.name.toUpperCase();
+}
+jamie.bigName();
+// => 'JAMIE'
+```
+
 
 ## Releases
 
@@ -113,3 +176,4 @@ previous release.
 
 [metz]: http://www.sandimetz.com/
 [jQuery library]: http://jquery.com/
+[orange tree challenge]: ../../../../orange-tree-1-just-oranges-challenge
