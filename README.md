@@ -7,24 +7,31 @@ We're going to create orange trees through a constructor function.  The construc
 
 
 ### Prototypal Inheritance
-When thinking about inheritance in JavaScript, throw out what we know about method lookup in Ruby—well, most of it, anyway.  JavaScript doesn't have classes, so when an object itself doesn't have a property, we can't look in the class, parent class, grandparent class, etc.  Instead, JavaScript objects inherit attributes and behaviors from their prototypes.  So, what is a prototype and how does an object get a prototype?
+When thinking about inheritance in JavaScript, throw out what we know about method lookup in Ruby—well, most of it, anyway.  JavaScript doesn't have classes, so when an object itself doesn't have a property, we can't look in the class, parent class, grandparent class, etc.  Instead, JavaScript objects inherit properties from their prototypes.  So, what is a prototype and how does an object get a prototype?
 
 Every JavaScript function has a `prototype` property.  Regardless of whether we intend to use the function as a constructor or not, when we write a function, JavaScript will give the function a `prototype` property and set its value to a new empty JavaScript object (`{}`, see Figure 1).
 
 ```js
+// Create a function and check its prototype property.
 var addition = function(number1, number2) {
   return number1 + number2;
 }
 addition.prototype;
 // => {}
 
+
+// Create a function to use as a constructor
+// and check its prototype property.
 var Person = function(name) {
   this.name = name;
 }
 Person.prototype;
 // => {}
+
+
+// Each function's prototype is a unique object.
 addition.prototype === Person.prototype;
-// => false ()
+// => false
 ```
 *Figure 1*. Creating functions and looking at the value of each function's `prototype` property.
 
