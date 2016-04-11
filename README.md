@@ -36,7 +36,9 @@ addition.prototype === Person.prototype;
 *Figure 1*. Creating functions and looking at the value of each function's `prototype` property.
 
 
-So, every function has a `prototype`, how does that affect inheritance?  A function's `prototype` object comes into play when we use a function as a constructor (e.g., `new Person("Jamie")`).  When we use a function as a constructor to initialize objects, the constructor's prototype object is figuratively buried deep within the newly created objects and becomes the object from which the new instances inherit.  If we want to know from which object an object inherits, we can ask `Object` to get it for us.  Figure 2 presents some code to demonstrate these concepts; follow along in the browser console or the node REPL if node is installed on our system (use the `node` command from the command line).
+So, every function has a `prototype`, how does that affect inheritance?  A function's `prototype` object comes into play when we use a function as a constructor (e.g., `new Person("Jamie")`).  When we use a function as a constructor to initialize objects, the constructor's prototype object is figuratively buried deep within the newly created objects and becomes the object from which the new instances inherit.  Any properties of the constructor function's prototype are inherited by objects instantiate through that constructor function.
+
+Figure 2 presents some code to demonstrate these concepts; follow along in the browser console or the node REPL if node is installed on our system (use the `node` command from the command line).
 
 ```js
 // Create a constructor function and check its prototype.
@@ -48,13 +50,13 @@ Person.prototype;
 
 
 // Give the Person constructor's prototype a greeting property.
-Person.prototype.greeting = "Hello";
+Person.prototype.greeting = 'Hello';
 Person.prototype;
 // => { greeting: 'Hello' }
 
 
 // Create a new Person instance, jamie.
-jamie = new Person("Jamie");
+jamie = new Person('Jamie');
 // => { name: 'Jamie' }
 
 
@@ -63,31 +65,37 @@ Object.getPrototypeOf(jamie);
 // => { greeting: 'Hello' }
 
 
-// Show that the object from which the jamie object inherits
+// The object from which the jamie object inherits
 // is the Person constructor's prototype.
 Object.getPrototypeOf(jamie) === Person.prototype;
 // => true
 
 
-// Show that the jamie object inherits the greeting property
-// from the Person constructor's prototype.
-Person.prototype.greeting;
-// => 'Hello'
+// The jamie object does not have a greeting property 
+// but inherits it from its prototype.
 jamie;
 // => { name: 'Jamie' }
-jamie.name;
-// => 'Jamie'
 jamie.greeting;
 // => 'Hello'
 
 
+// Other objects instantiated through the Person constructor
+// also inherit from the constructor's prototype.
+nicky = new Person('Nicky');
+// => { name: 'Nicky' }
+nicky.greeting;
+// => 'Hello'
+
+
 // Add another property to the Person constructor's prototype, 
-// and show that is it inherited by the jamie object.
+// and show that is it inherited by the Person objects.
 Person.prototype.bigName = function() {
   return this.name.toUpperCase();
 }
 jamie.bigName();
 // => 'JAMIE'
+nicky.bigName();
+// => 'NICKY'
 ```
 *Figure 2*.  Exploring prototypal inheritance in JavaScript.
 
