@@ -119,7 +119,7 @@ Here are some details for how our orange tree model will behave.  Don't worry ab
 
 
 ## Conclusion
-Prototypal inheritance is different from the class-based inheritance found in Ruby.  When we try to access a property of an object, property look up starts with the object itself.  If the object has the property, it is returned.  If it doesn't have the property, then we look for the property in the object's prototype, then the prototype's prototype, etc.  We should leave this challenge understanding how to share properties among objects created through the same constructor function by relying on inheriting from the constructor's prototype object.
+Prototypal inheritance is different from the class-based inheritance found in Ruby.  When we try to access a property of an object, property look up starts with the object itself.  If the object has the property, the value of the property is returned.  If the object doesn't have the property itself, then we look for the property in the object's prototype ... then the prototype's prototype, an so on.  We should leave this challenge understanding how to share properties among objects created through the same constructor function by relying on inheriting from the constructor's prototype object.
 
 
 [orange tree challenge]: ../../../../orange-tree-1-just-oranges-challenge
