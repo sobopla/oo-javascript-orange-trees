@@ -114,7 +114,7 @@ Here are some details for how our orange tree model will behave.  Don't worry ab
   - Any unharvested oranges from the previous season should drop.
   - A tree should age one year.
   - A tree should grow 2.5 feet taller until it reaches its maximum height, say 25 feet.
-  - A tree should bear fruit if it is mature (i.e. at least six years old), say 100 to 300 oranges.
+  - A tree should bear fruit if it is mature (i.e. at least six years old), say 10 oranges.
 - We can pick an orange off a tree (`pick_an_orange()`).
 
 
