@@ -36,7 +36,7 @@ addition.prototype === Person.prototype;
 *Figure 1*. Creating functions and looking at the value of each function's `prototype` property.
 
 
-So, every function has a `prototype`, how does that affect inheritance?  A function's `prototype` object comes into play when we use a function as a constructor (e.g., `new Person("Jamie")`).  When we use a function as a constructor to initialize objects, the constructor's prototype object is figuratively buried deep within the newly created objects and becomes the object from which the new instances inherit.  Any properties of the constructor function's prototype are inherited by objects instantiate through that constructor function.
+So, every function has a `prototype`, how does that affect inheritance?  A function's `prototype` object comes into play when we use a function as a constructor (e.g., `new Person("Jamie")`).  When we use a function as a constructor to initialize objects, the constructor's prototype object is figuratively buried deep within the newly created objects and becomes the object from which the new instances inherit.  Any properties of the constructor function's prototype are inherited by objects instantiated through that constructor function.
 
 Figure 2 presents some code to demonstrate these concepts; follow along in the browser console or the node REPL if node is installed on our system (use the `node` command from the command line).
 
