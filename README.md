@@ -109,15 +109,15 @@ Here are some details for how our orange tree model will behave.  Don't worry ab
 - A tree has an age, which we should be able to check (`age`).
 - A tree has a height, which we should be able to check (`height`).
 - A tree has a collection of oranges, which we should be able to check (`oranges`).
-- We can check if a tree is old enough to produce fruit (`is_mature()`).
-- A tree dies at age 100, and we can check if it's dead (`is_dead()`).
-- We can check if a tree has any oranges (`has_oranges()`).
-- Each growing season (`pass_growing_season()`) ...
+- We can check if a tree is old enough to produce fruit (`isMature()`).
+- A tree dies at age 100, and we can check if it's dead (`isDead()`).
+- We can check if a tree has any oranges (`hasOranges()`).
+- Each growing season (`passGrowingSeason()`) ...
   - Any unharvested oranges from the previous season should drop.
   - A tree should age one year.
   - A tree should grow 2.5 feet taller until it reaches its maximum height, say 25 feet.
   - A tree should bear fruit if it is mature (i.e. at least six years old), say 10 oranges.
-- We can pick an orange off a tree (`pick_an_orange()`).
+- We can pick an orange off a tree (`pickAnOrange()`).
 
 
 ## Conclusion
