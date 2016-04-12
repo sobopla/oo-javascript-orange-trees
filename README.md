@@ -3,7 +3,7 @@
 ## Summary
 Remember the [orange tree][orange tree challenge] objects that we built in Ruby?  We're going to build JavaScript objects with the same attributes and behaviors.  
 
-We're going to create orange trees through a constructor function.  The constructor will initialize each tree with its own unique attributes: age, height, and a collection of oranges.  All trees might start being zero years old, zero feet tall, and with an empty collection of oranges; but, these attributes are unique to each tree object—they're not shared.  On the other hand, the behaviors of orange trees will be shared.  All trees will inherit methods for aging, growing, etc.
+We're going to create orange trees through a constructor function.  The constructor will initialize each tree with its own unique attributes: age, height, and a collection of oranges.  All trees might start being zero years old, zero feet tall, and with an empty collection of oranges; but, these attributes are unique to each tree object—they're not shared.  On the other hand, the behaviors of orange trees will be shared.  All trees will share methods for aging, growing, etc.
 
 
 ### Prototypal Inheritance
