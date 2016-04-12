@@ -1,10 +1,10 @@
 var Orange = function() {
-  var minOrangeDiameter = 2.5;
-  var maxOrangeDiameter = 3.2;
+  this.diameter = this.calculateDiameter();
+}
 
-  var orangeDiameter = function() {
-    return (Math.random() * (maxOrangeDiameter - minOrangeDiameter)) + minOrangeDiameter;
-  }
+Orange.prototype.minOrangeDiameter = 2.5;
+Orange.prototype.maxOrangeDiameter = 3.2;
 
-  this.diameter = orangeDiameter();
+Orange.prototype.calculateDiameter = function() {
+  return (Math.random() * (this.maxOrangeDiameter - this.minOrangeDiameter)) + this.minOrangeDiameter;
 }
