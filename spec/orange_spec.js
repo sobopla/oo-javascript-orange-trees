@@ -1,5 +1,9 @@
 describe("an orange", function() {
-  var orange = new Orange();
+  var orange;
+
+  beforeEach(function() {
+    orange = new Orange();
+  });
 
   it("has a diameter between 2.5 and 3.2", function() {
     expect(orange.diameter).not.toBeLessThan(2.5);
